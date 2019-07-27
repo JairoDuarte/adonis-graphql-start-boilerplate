@@ -1,32 +1,53 @@
 {
-  "name": "adonis-api-app",
-  "version": "4.1.0",
-  "adonis-version": "4.1.0",
-  "description": "Adonisjs boilerplate for API server with pre-configured JWT",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "node ace test"
-  },
-  "keywords": [
-    "adonisjs",
-    "adonis-app"
-  ],
-  "author": "",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@adonisjs/ace": "^5.0.8",
-    "@adonisjs/auth": "^3.0.7",
-    "@adonisjs/bodyparser": "^2.0.5",
-    "@adonisjs/cors": "^1.0.7",
-    "@adonisjs/fold": "^4.0.9",
-    "@adonisjs/framework": "^5.0.9",
-    "@adonisjs/ignitor": "^2.0.8",
-    "@adonisjs/lucid": "^6.1.3"
-  },
-  "devDependencies": {},
-  "autoload": {
-    "App": "./app"
-  }
+	"name": "adonis-api-app",
+	"version": "4.1.0",
+	"adonis-version": "4.1.0",
+	"description": "Adonisjs start with graphql",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon --no-warnings server.js",
+		"lint": "eslint '**/*.js'",
+		"lint:fix": "eslint '**/*.js' --fix",
+		"test": "node --no-warnings ace test "
+	},
+	"keywords": [
+		"adonisjs",
+		"adonis-app"
+	],
+	"author": "",
+	"license": "UNLICENSED",
+	"private": true,
+	"dependencies": {
+		"@adonisjs/ace": "^5.0.8",
+		"@adonisjs/auth": "^3.0.7",
+		"@adonisjs/bodyparser": "^2.0.5",
+		"@adonisjs/cors": "^1.0.7",
+		"@adonisjs/fold": "^4.0.9",
+		"@adonisjs/framework": "^5.0.9",
+		"@adonisjs/ignitor": "^2.0.8",
+		"@adonisjs/lucid": "^6.1.3",
+		"@adonisjs/redis": "^2.0.7",
+		"@adonisjs/validator": "^5.0.3",
+		"@adonisjs/vow": "^1.0.17",
+		"apollo-server": "^2.7.0",
+		"apollo-server-adonis": "^1.4.0",
+		"graphql": "^14.4.2",
+		"graphql-playground-html": "^1.6.13",
+		"graphql-tools": "^4.0.5",
+		"lodash": "^4.17.14",
+		"lucid-mongo": "^3.1.6",
+		"nodemon": "^1.19.1"
+	},
+	"devDependencies": {
+		"eslint": "^6.0.1",
+		"eslint-config-airbnb-base": "^13.2.0",
+		"eslint-config-prettier": "^6.0.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jest": "^22.12.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"prettier": "^1.18.2"
+	},
+	"autoload": {
+		"App": "./app"
+	}
 }
