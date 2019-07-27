@@ -1,10 +1,7 @@
-'use strict'
-
 /** @type {import('@adonisjs/framework/src/Env')} */
-const Env = use('Env')
+const Env = use('Env');
 
 module.exports = {
-
   /*
   |--------------------------------------------------------------------------
   | Application Name
@@ -16,7 +13,7 @@ module.exports = {
   |
   */
 
-  name: Env.get('APP_NAME', 'AdonisJs'),
+  name: Env.get('APP_NAME', 'AdonisJs-start'),
 
   /*
   |--------------------------------------------------------------------------
@@ -81,7 +78,6 @@ module.exports = {
     |
     */
     jsonpCallback: 'callback',
-
 
     /*
     |--------------------------------------------------------------------------
@@ -188,7 +184,7 @@ module.exports = {
     | Available drivers are: `file` and `console`.
     |
     */
-    transport: 'console',
+    transport: 'file',
 
     /*
     |--------------------------------------------------------------------------
@@ -201,8 +197,7 @@ module.exports = {
     */
     console: {
       driver: 'console',
-      name: 'adonis-app',
-      level: 'info'
+      name: 'adonis-start'
     },
 
     /*
@@ -218,9 +213,8 @@ module.exports = {
     */
     file: {
       driver: 'file',
-      name: 'adonis-app',
-      filename: 'adonis.log',
-      level: 'info'
+      name: 'adonis-start',
+      filename: 'adonis-start.log'
     }
   },
 
@@ -240,4 +234,4 @@ module.exports = {
     path: '/',
     maxAge: 7200
   }
-}
+};
