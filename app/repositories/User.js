@@ -1,4 +1,4 @@
-const Base = use('App/repository');
+const Base = use('App/repositories');
 
 class User extends Base {
   async findOrCreate(data) {

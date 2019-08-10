@@ -1,5 +1,5 @@
 const User = use('App/Models/User');
-const { addUser } = use('App/businessLogic/User');
+const { addUser } = use('App/businessLogics/User');
 
 {
   const { test, afterEach, trait, beforeEach } = use('Test/Suite')('User login');

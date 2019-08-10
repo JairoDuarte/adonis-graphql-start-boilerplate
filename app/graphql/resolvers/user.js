@@ -1,9 +1,7 @@
 const { unauthenticated } = require('../../Validators/Errors');
 const { check } = require('../../Middleware/Authentication');
 
-const User = use('App/businessLogic/User');
-
-//const userBusiness = new User();
+const User = use('App/businessLogics/User');
 
 module.exports = {
   Query: {

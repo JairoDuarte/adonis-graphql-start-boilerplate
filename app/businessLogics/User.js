@@ -1,5 +1,5 @@
 const UserModel = use('App/Models/User');
-const UserRepository = use('App/repository/User');
+const UserRepository = use('App/repositories/User');
 
 const repository = new UserRepository(UserModel);
 

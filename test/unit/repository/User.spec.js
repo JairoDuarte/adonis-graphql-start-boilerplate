@@ -1,5 +1,5 @@
 const User = use('App/Models/User');
-const UserRepository = use('App/repository/User');
+const UserRepository = use('App/repositories/User');
 
 {
   const { test, afterEach, beforeEach } = use('Test/Suite')(' User crud operations');

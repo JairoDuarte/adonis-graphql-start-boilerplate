@@ -1,5 +1,5 @@
-const User = require('../../businessLogic/User');
-const Auth = require('../../businessLogic/Auth');
+const User = require('../../businessLogics/User');
+const Auth = require('../../businessLogics/Auth');
 const { login, register } = require('../../Validators/User');
 
 const { validator } = require('../../Validators');
