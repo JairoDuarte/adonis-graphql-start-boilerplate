@@ -1,24 +1,35 @@
-'use strict'
+/** @type {typeof import('./node_modules/@adonisjs/lucid/src/Lucid/Model')} */
+const Model = use('Model');
 
-/** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
-const Model = use('Model')
-
-/** @type {import('@adonisjs/framework/src/Hash')} */
-const Hash = use('Hash')
+/** @type {import('./node_modules/@adonisjs/framework/src/Hash')} */
+const Hash = use('Hash');
 
 class User extends Model {
-  static boot () {
-    super.boot()
+  static get createTimestamp() {
+    return 'createdAt';
+  }
+
+  static get updateTimestamp() {
+    return 'updatedAt';
+  }
+
+  static get deleteTimestamp() {
+    return 'deletedAt';
+  }
+
+  static boot() {
+    super.boot();
 
     /**
      * A hook to hash the user password before saving
      * it to the database.
      */
-    this.addHook('beforeSave', async (userInstance) => {
+    this.addHook('beforeSave', async userInstance => {
       if (userInstance.dirty.password) {
-        userInstance.password = await Hash.make(userInstance.password)
+        const instance = userInstance;
+        instance.password = await Hash.make(instance.password);
       }
-    })
+    });
   }
 
   /**
@@ -31,9 +42,9 @@ class User extends Model {
    *
    * @return {Object}
    */
-  tokens () {
-    return this.hasMany('App/Models/Token')
+  tokens() {
+    return this.hasMany('App/Models/Token');
   }
 }
 
-module.exports = User
+module.exports = User;
