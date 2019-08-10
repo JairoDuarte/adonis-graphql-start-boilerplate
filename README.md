@@ -24,11 +24,12 @@ After days searching the best architecture, i found many good architecture for N
 
 1. [Lucid Mongo](https://github.com/duyluonglc/lucid-mongo)
 2. [Apollo Server](https://github.com/apollographql/apollo-server)
-3. [MongoDB](https://mongodb.com)
-4. [Redis](https://redis.io/)
-5. [pm2](https://pm2.io/doc/en/runtime/overview/)
-6. ESlint
-7. Prettier
+3. [GraphQL Playground](https://github.com/prisma/graphql-playground)
+4. [MongoDB](https://mongodb.com)
+5. [Redis](https://redis.io/)
+6. [pm2](https://pm2.io/doc/en/runtime/overview/)
+7. ESlint
+8. Prettier
 
 
 ## Features
