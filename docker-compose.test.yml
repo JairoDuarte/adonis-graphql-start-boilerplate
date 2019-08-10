@@ -1,0 +1,28 @@
+version: '3.5'
+
+x-networks:
+  &default-networks
+  networks:
+  - app-network
+
+networks:
+    app-network:
+        driver: bridge
+        name: "${APP_NAME}-network"
+
+services:
+  # Database
+  database:
+    << : *default-networks
+  
+  # Redis
+  redis:
+    << : *default-networks
+  
+  # GraphQL
+  api:
+    << : *default-networks
+    environment:
+      - NODE_ENV=development
+      - DB_CONNECTION_STRING=mongodb://database/adonis-start-test
+    command: "yarn run startup:test"

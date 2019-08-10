@@ -184,7 +184,7 @@ module.exports = {
     | Available drivers are: `file` and `console`.
     |
     */
-    transport: 'file',
+    transport: 'console',
 
     /*
     |--------------------------------------------------------------------------
