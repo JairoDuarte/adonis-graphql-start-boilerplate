@@ -1,6 +1,5 @@
-const { unauthenticated } = require('../Validators/Errors');
+const { unauthenticated, addMessageError } = require('../Validators/Errors');
 
-const Logger = use('Logger');
 const Redis = use('Redis');
 
 async function check(auth, request, callback) {
@@ -16,8 +15,7 @@ async function check(auth, request, callback) {
       throw new Error('token in blacklist');
     }
   } catch (e) {
-    Logger.error(e);
-    throw unauthenticated('Missing or invalid jwt token');
+    throw addMessageError(unauthenticated, e.message);
   }
 
   return callback;
